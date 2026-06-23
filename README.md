@@ -1,16 +1,109 @@
-# React + Vite
+# 🚀 Redux Saga User Loader App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application demonstrating **Redux Toolkit + Redux Saga** for handling asynchronous API calls and state management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Features
 
-## React Compiler
+* Fetch users from a public API
+* Redux Toolkit for state management
+* Redux Saga for handling side effects (async API calls)
+* Loading and error handling states
+* Clean and simple UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React (Vite)
+* Redux Toolkit
+* Redux Saga
+* React-Redux
+* Axios
+* JavaScript (ES6+)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── redux/
+ │    ├── store.js
+ │    ├── userSlice.js
+ │    └── saga.js
+ │
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone project
+
+```
+git clone <your-repo-url>
+cd redux-saga-demo
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Install required packages
+
+```
+npm install @reduxjs/toolkit react-redux redux-saga axios
+```
+
+### 4. Run the project
+
+```
+npm run dev
+```
+
+---
+
+## 🔄 How it works
+
+1. User clicks **"Load Users"** button
+2. Redux dispatches `fetchUsersRequest` action
+3. Redux Saga listens for the action
+4. Saga makes API call using Axios
+5. On success → data is stored in Redux store
+6. React UI updates automatically from store
+
+---
+
+## 🌐 API Used
+
+* JSONPlaceholder Users API
+  https://jsonplaceholder.typicode.com/users
+
+---
+
+## 📸 UI Flow
+
+Button Click → Redux Action → Saga API Call → Redux Store Update → UI Render
+
+---
+
+## 🎯 Learning Outcome
+
+* Understanding Redux architecture
+* Handling async operations with Redux Saga
+* Middleware concept in Redux
+* State management in React applications
+
+---
+
+## 👨‍💻 Author
+
+Kanesha K
+GitHub: https://github.com/kaneshak79
+LinkedIn: https://linkedin.com/in/kanesha-k-7308671a6
